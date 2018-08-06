@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>the best page ever</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <style>
+      .red-text {
+          color: red;
+      }
+
+      h2 {
+          font-family: Lobster, monospace;
+      }
+
+      p {
+          font-size: 16px;
+          font-family: monospace;
+      }
+
+      .thick-green-border {
+          border-color: green;
+          border-width: 10px;
+          border-style: solid;
+      }
+
+      .smaller-image {
+          width: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>CatPhotoApp</h2>
+    <main>
+      <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+      
+      <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+      <div>
+        <p>Things cats love:</p>
+        <ul>
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <p>Top 3 things cats hate:</p>
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+      </div>
+
+      
+      <form action="/submit-cat-photo">
+        <label for="indoor">
+          <input id="indoor" type="radio" name="indoor-outdoor">Indoor
+        </label>
+        <label for="indoor">
+          <input id="indoor" type="radio" name="indoor-outdoor">Indoor
+        </label>
+        <label for="indoor">
+          <input id="indoor" type="radio" name="indoor-outdoor">Indoor
+        </label>
+        <br>
+
+
+        <label for="indoor2">
+          <input id="indoor2" type="checkbox" name="indoor-outdoor">Indoor
+        </label>
+        <label for="indoor2">
+          <input id="indoor2" type="checkbox" name="indoor-outdoor">Indoor
+        </label>
+        <br>
+        <input type="text" placeholder="cat photo URL" required>
+        <button type="submit">Submit</button>
+      </form>
+      
+    </main>
+  </body>
+  
+</html>

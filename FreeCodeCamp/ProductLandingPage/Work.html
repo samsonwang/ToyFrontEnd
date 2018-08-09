@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  
+  <style>
+    body {
+        text-align: center;
+        margin: auto;
+        background-color: #eee;
+    }
+
+    header {
+        display: flex;
+        position: fixed;
+        top: 0;
+        min-height: 75px;
+        align-items: center;
+        justify-content: space-around;
+        background-color: inherit;
+        z-index: 10;
+    }
+
+    .header-logo {
+        display: flex;
+        width: 60vw;
+        align-content: left;
+    }
+
+    .header-logo img{
+        display: flex;
+        width: 100%;
+        max-width: 350px;
+        height: 100%;
+        margin-left: 20px;
+    }
+
+    nav {
+        display: flex;
+        
+    }
+    
+    nav ul {
+        list-style: none;
+        width: 35vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #nav-bar li {
+        display: inline-block;
+    }
+
+    nav a {
+        font-size: 1.1em;
+        margin-left: 20px;
+        text-decoration: none;
+        color: black;
+    }
+    
+    body {
+        margin-top: 75px;
+    }
+
+    #features {
+        margin: 30px auto 30px auto;
+        max-width: 800px;
+    }
+
+    .feature-grid {
+        display: flex;
+    }
+
+    .feature-grid .feature-icon {
+        width: 20vw;
+        align-items: center;
+        justify-content: center;
+        color: darkorange;
+    }
+
+    .feature-grid .feature-desc {
+        width: 60vw;
+        margin-left: 10px;
+        text-align: left;
+    }
+
+    .feature-grid .feature-desc .feature-name {
+        font-size: 1.5em;
+    }
+
+    .feature-grid .feature-desc p {
+        margin-top: 5px;
+    }
+    
+    #pricing {
+        margin: 30px auto 20px auto;
+        display: flex;
+        flex-direction: row;
+        max-width: 800px;
+        justify-content: center;
+    }
+
+    .pricing-item {
+        margin: 10px;
+        border: 1px solid black;
+        border-radius: 3px;
+        width: 33%;
+        padding-bottom: 20px;
+    }
+
+    .pricing-title {
+        border-radius: inherit;
+        background-color: #ddd;
+        padding: 10px 0 10px 0
+    }
+
+    .pricing-price {
+        font-size: 1.5em;
+    }
+
+    .pricing-select {
+        width: 80px;
+        height: 30px;
+        border: 0px;
+        border-radius: 2px;
+        background-color: darkorange;
+    }
+
+    @media (max-width: 550px) {
+        #pricing {
+            flex-direction: column;
+            justify-item: center;
+        }
+
+        .pricing-item {
+            max-width: 300px;
+            width: 100%;
+            margin: 10px auto 10px auto;
+        }
+    }
+    
+  </style>
+
+  
+  <header id="header">
+    <div class="header-logo">
+      <img id="header-img" src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" alt="">
+    </div>
+    <nav id="nav-bar">
+      <ul>
+        <li><a class="nav-link" href="#features">Features</a></li>
+        <li><a class="nav-link" href="#how-it-works">How it Works</a></li>
+        <li><a class="nav-link" href="#pricing">Pricing</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <h2>Handcrafted, home-made masterpieces</h2>
+
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <input id="email" type="email" name="email" placeholder="Enter your email address">
+      <input id="submit" type="submit" value="GET STARTED">
+    </form>
+
+    <section id="features">
+      <div class="feature-grid">
+        <div class="feature-icon">
+          img1
+        </div>
+
+        <div class="feature-desc">
+          <div class="feature-name">Premium Materials</div>
+          <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-icon">
+          img2
+        </div>
+
+        <div class="feature-desc">
+          <div class="feature-name">Fast Shipping</div>
+          <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-icon">
+          img2
+        </div>
+
+        <div class="feature-desc">
+          <div class="feature-name">Quality Assurance</div>
+          <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+        </div>
+
+        
+      </div>      
+    </section>
+
+
+    <section id="how-it-works">
+      <video id="video" controls>
+        <source src="" type="video/mp4">
+      </video>
+    </section>
+    
+    <section id="pricing">
+      <div id="pricing-1" class="pricing-item">
+        <div class="pricing-title">TENOR TROMBONE</div>
+        <p class="pricing-price">$600</p>
+        <p class="pricing-describe">Lorem ipsum.Lorem ipsum.Lorem ipsum dolor.Lorem ipsum.</p>
+        <button class="pricing-select">SELECT</button>
+      </div>
+
+      <div id="pricing-2" class="pricing-item">
+        <div class="pricing-title">BASS TROMBONE</div>
+        <p class="pricing-price">$900</p>
+        <p class="pricing-describe">Lorem ipsum.Lorem ipsum.Lorem ipsum dolor.Lorem ipsum.</p>
+        <button class="pricing-select">SELECT</button>
+      </div>
+
+      <div id="pricing-2" class="pricing-item">
+        <div class="pricing-title">VALVE TROMBONE</div>
+        <p class="pricing-price">$1200</p>
+        <p class="pricing-describe">Plays similar to a Trumpet Great for Jazz Bands Lorem ipsum dolor.Lorem ipsum.</p>
+        <button class="pricing-select">SELECT</button>
+      </div>
+      
+    </section>
+    
+    
+    
+  </body>
+
+
+  <footer>
+    <div>Copyright 2016, Original Trombones</div>    
+  </footer>
+
+
+  
+  
+</html>

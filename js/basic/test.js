@@ -1,3 +1,4 @@
+
 // Declare your variable here
 var myGlobal = 10;
 

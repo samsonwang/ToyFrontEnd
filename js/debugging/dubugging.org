@@ -1,0 +1,14 @@
+
+
+https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/debugging
+
+在debugging的时候会遇到哪些内容
+1) syntax errors that prevent a program from running,
+2) runtime errors when code fails to execute or has unexpected behavior,
+3) semantic (or logical) errors when code doesn't do what it's meant to.
+
+在debugging中主要介绍了常见的错误形式，对于调试的方法，目前仅限于进行console输出
+
+
+
+

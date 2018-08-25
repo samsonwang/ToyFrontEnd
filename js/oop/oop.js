@@ -39,3 +39,35 @@ Animal.prototype = {
     console.log("nom nom nom");
   }
 };
+
+
+// 使用Object.create创建对象
+let duck = Object.create(Animal.prototype);
+
+// 使用一下语句完成派生关系的体现
+Bird.prototype = Object.create(Animal.prototype);
+
+
+// js中的cloure相当于C++中的私有变量访问方法
+
+
+// immediately invoked function expression (IIFE)
+(function () {
+  console.log("A cozy nest is ready");
+}) ();
+
+// IIFF return an module
+let motionModule = (function () {
+  return {
+    glideMixin: function (obj) {
+      obj.glide = function() {
+        console.log("Gliding on the water");
+      };
+    },
+    flyMixin: function(obj) {
+      obj.fly = function() {
+        console.log("Flying, wooosh!");
+      };
+    }
+  }
+}) (); // The two parentheses cause the function to be immediately invoked

@@ -4,7 +4,8 @@ body {
   align-content: center;
   align-items: center;
   height: 98vh;
-  background-color: green;
+  color: white;
+  background-color: white;
 }
 
 h1 {
@@ -18,18 +19,19 @@ h1 {
   border-radius: 5px;
 }
 #quote-box #quote-text {
-  color: green;
+  color: inherit;
   margin-bottom: 10px;
+  text-align: center;
 }
 #quote-box #quote-text i {
   font-size: 2em;
-  margin-left: 1em;
+  margin-left: 10px;
 }
 #quote-box #quote-text span {
   font-size: 1.5em;
 }
 #quote-box #quote-author {
-  color: green;
+  color: inherit;
   text-align: right;
   margin-bottom: 10px;
 }
@@ -41,10 +43,14 @@ h1 {
   margin-left: 5px;
   padding: 0px;
   color: white;
-  background-color: green;
+  background-color: inherit;
   border: none;
   font-size: 1.2em;
   text-align: center;
+  cursor: pointer;
+}
+#quote-box #buttons .button:hover {
+  opacity: 0.8;
 }
 #quote-box #buttons #tweet-quote {
   float: left;

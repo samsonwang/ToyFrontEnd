@@ -1,71 +1,71 @@
 
 body {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    height: 98vh;
-    color: white;
-    background-color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 98vh;
+  color: white;
+  background-color: white;
 }
 
 #quote-box {
-    width: 450px;
-    padding: 30px 40px;
-    background-color: white;
-    border-radius: 5px;
+  width: 450px;
+  padding: 30px 40px;
+  background-color: white;
+  border-radius: 5px;
 
-    #quote-text {
-        color: inherit;
-        margin-bottom: 10px;
-        text-align: center;
-        i {
-            font-size: 2em;
-            margin-left: 10px;
-        }
-        span {
-            font-size: 1.5em;
-        }
+  #quote-text {
+    color: inherit;
+    margin-bottom: 10px;
+    text-align: center;
+    i {
+      font-size: 2em;
+      margin-left: 10px;
+    }
+    span {
+      font-size: 1.5em;
+    }
+  }
+
+  #quote-author {
+    color: inherit;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+
+  #buttons {
+    .button {
+      height: 40px;
+      width: 40px;
+      line-height: 2em;
+      border-radius: 5px;
+      margin-left: 5px;
+      padding: 0px;
+      color: white;
+      background-color: inherit;
+      border: none;
+      font-size: 1.2em;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
-    #quote-author {
-        color: inherit;
-        text-align: right;
-        margin-bottom: 10px;
+    #tweet-quote {
+      float: left;
     }
 
-    #buttons {
-        .button {
-            height: 40px;
-            width: 40px;
-            line-height: 2em;
-            border-radius: 5px;
-            margin-left: 5px;
-            padding: 0px;
-            color: white;
-            background-color: inherit;
-            border: none;
-            font-size: 1.2em;
-            text-align: center;
-            cursor: pointer;
-
-            &:hover {
-                opacity: 0.8;
-            }
-        }
-
-        #tweet-quote {
-            float: left;
-        }
-
-        #tumblr-quote {
-            float: left;
-        }
-
-        #new-quote {
-            float: right;
-            width: 90px;
-            font-size: 0.85em;
-        }
+    #tumblr-quote {
+      float: left;
     }
+
+    #new-quote {
+      float: right;
+      width: 90px;
+      font-size: 0.85em;
+    }
+  }
 }

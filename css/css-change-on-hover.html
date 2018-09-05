@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <style type="text/css" media="screen">
+    .hv {
+      width: 500px;
+      height: 500px;
+      border: 1px solid;
+    }
+
+    .hv:before {
+      position: relative;
+      left: 400px;
+      top: 10px;
+      display: none;
+      content: "before";
+    }
+
+    .hv:hover:before {
+      display: inline;
+    }
+
+  </style>
+
+
+  <body>
+    <div class="hv"></div>
+  </body>
+
+</html>

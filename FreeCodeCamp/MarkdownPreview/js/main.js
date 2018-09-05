@@ -1,7 +1,6 @@
 // -*- mode: js-jsx -*-
 
 'use strict';
-console.log("Markdown previewer, initializing");
 
 class TitleBar extends React.Component {
   constructor(props) {
@@ -9,9 +8,12 @@ class TitleBar extends React.Component {
   }
 
   render() {
-    return <div>header</div>;
+    return (
+      <div>
+        <header>{this.props.title}</header>
+      </div>
+    );
   }
-
 }
 
 class Previewer extends React.Component {
@@ -20,9 +22,15 @@ class Previewer extends React.Component {
   }
 
   render() {
-    return <div>previewer</div>;
+    return (
+      <div>
+        <TitleBar title="Preview"/>
+        <div id="preview">
+          <p>{this.props.content}</p>
+        </div>
+      </div>
+    );
   }
-
 }
 
 class Editor extends React.Component {
@@ -31,7 +39,15 @@ class Editor extends React.Component {
   }
 
   render() {
-    return <div>editor</div>;
+    return (
+      <div>
+        <TitleBar title="Editor"/>
+        <textarea
+          id="editor"
+          onChange={this.props.handleChange}>
+        </textarea>
+      </div>
+    );
   }
 }
 
@@ -39,28 +55,32 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: "hello app!"
+      inputText: "hello app!"
     }
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      inputText: event.target.value
+    });
   }
 
   render() {
     return (
       <div>
-        <p>{this.state.text}</p>
-        <Previewer />
-        <Editor />
+        <Editor handleChange={this.handleChange}/>
+        <Previewer content={this.state.inputText}/>
       </div>
     );
   }
 }
 
-function initApp() {
+window.onload = function initApp() {
+  console.log("init app ...");
   const reactElement = React.createElement(App);
   const reactDomContainer = document.querySelector('#app');
 
   ReactDOM.render(<App />, reactDomContainer);
 }
-
-window.onload = () => {
-  initApp();
-};

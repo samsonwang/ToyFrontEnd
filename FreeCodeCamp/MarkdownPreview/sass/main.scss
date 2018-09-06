@@ -1,0 +1,72 @@
+
+.titlebar {
+  display: flex;
+  width: 99%;
+  padding: 5px;
+  border: 1px solid;
+
+  i {
+    width: 25px;
+    margin: 0 5px;
+    line-height: 22px
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 22px;
+    margin-left: 10px;
+    flex-grow: 100;
+  }
+
+  .size {
+    font-size: 20px;
+    &:hover {
+      color: red;
+      cursor: pointer;
+    }
+  }
+}
+
+.editor-component {
+  margin: 18px auto;
+  width: 600px;
+  #editor {
+    width: 99%;
+    min-height: 300px;
+    border: 1px solid #1d2f2f;
+    border-top: none;
+    padding-left: 8px;
+  }
+}
+
+
+.previewer-component {
+  width: 800px;
+  margin: 18px auto;
+  #preview {
+    width: 99%;
+    border: 1px solid #1d2f2f;
+    border-top: none;
+    padding-top: 2px;
+    padding-left: 10px;
+  }
+}
+
+.maximized {
+  width: 95vw;
+  #editor {
+    height: 600px;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}

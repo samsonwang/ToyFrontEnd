@@ -2,6 +2,18 @@
 
 'use strict';
 
+
+// ALLOWS LINE BREAKS WITH RETURN BUTTON
+marked.setOptions({
+  breaks: true,
+});
+
+// INSERTS target="_blank" INTO HREF TAGS (required for codepen links)
+const renderer = new marked.Renderer();
+renderer.link = function (href, title, text) {
+  return `<a target="_blank" href="${href}">${text}` + '</a>';
+}
+
 class TitleBar extends React.Component {
   constructor(props) {
     super(props);
@@ -33,7 +45,7 @@ class Previewer extends React.Component {
   getHtml() {
     // transform md to html
     const markdown = this.props.content;
-    const html = marked(markdown);
+    const html = marked(markdown, {renderer: renderer});
     // console.log("Preview: " + markdown + " => " + html);
     return {__html: html};
   }
@@ -146,7 +158,7 @@ class App extends React.Component {
   }
 
   handleResize(id) {
-    console.log("App handle resize " + id + ", " + this.state.resizedComponent);
+//    console.log("App handle resize " + id + ", " + this.state.resizedComponent);
 
     if (id == this.state.resizedComponent) {
       this.setState({resizedComponent: 0});

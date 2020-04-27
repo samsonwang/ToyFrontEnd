@@ -387,22 +387,10 @@ p.more {
   /* Disable horizontal scroll */
   padding-top: 20px;
 }
-.sidebar .sidebar-module {
-  padding: 15px;
+.sidebar section {
+  padding-left: 15px;
   font-size: 15px;
   margin-bottom: 15px;
-}
-.sidebar .sidebar-module-inset {
-  background-color: #f8f8f8;
-  border-radius: 4px;
-}
-.sidebar .sidebar-module-inset p:last-child,
-.sidebar .sidebar-module-inset ul:last-child,
-.sidebar .sidebar-module-inset ol:last-child {
-  margin-bottom: 0;
-}
-.sidebar .sidebar-aboutme p {
-  margin-bottom: 0;
 }
 .sidebar .sidebar-category li:before {
   font-family: FontAwesome;
@@ -410,6 +398,28 @@ p.more {
   font-style: normal;
   content: "";
   margin-right: 5px;
+}
+.sidebar .sidebar-avatar {
+  display: block;
+  width: 60%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  opacity: 0.3;
+  transition: opacity 0.5s;
+}
+.sidebar .sidebar-avatar:hover {
+  opacity: 0.9;
+}
+.sidebar .sidebar-aboutme p {
+  margin-bottom: 0;
+}
+.sidebar .sidebar-module-inset {
+  border-radius: 4px;
+}
+.sidebar .sidebar-module-inset p:last-child,
+.sidebar .sidebar-module-inset ul:last-child,
+.sidebar .sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
 }
 
 .breadcrumb > li + li:before {
@@ -512,9 +522,6 @@ article .tags a[href]:after {
     display: none;
   }
 }
-/*
- * Override Bootstrap's default container.
- */
 @media (min-width: 1200px) {
   .container {
     width: 970px;

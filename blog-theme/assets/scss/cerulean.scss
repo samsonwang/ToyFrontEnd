@@ -22,7 +22,7 @@ body {
   //  background-image: url("../images/background.png");
   //  background-image: repeating-linear-gradient(0deg, #ffffff, #ffffff 3px, #fdfdfd 3px, #fdfdfd 6px);
   background-image: linear-gradient(to bottom, transparent 90%, $theme-grey5 10%),
-                    linear-gradient(to right, transparent 90%, $theme-grey5 10%);
+  linear-gradient(to right, transparent 90%, $theme-grey5 10%);
   background-size: 10px 10px, 10px 10px;
   //  background-repeat: repeat;
 }
@@ -434,28 +434,10 @@ p.more {
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 
-  .sidebar-module {
-    padding: 15px;
+  section {
+    padding-left: 15px;
     font-size: 15px;
     margin-bottom: 15px;
-  }
-
-  .sidebar-module-inset {
-    background-color: $theme-grey5;
-    border-radius: 4px;
-
-    p:last-child,
-    ul:last-child,
-    ol:last-child {
-      margin-bottom: 0;
-    }
-
-  }
-
-  .sidebar-aboutme {
-    p {
-      margin-bottom: 0;
-    }
   }
 
   .sidebar-category {
@@ -467,6 +449,35 @@ p.more {
       margin-right: 5px;
     }
   }
+
+  .sidebar-avatar {
+    display: block;
+    width: 60%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    opacity: 0.3;
+    transition: opacity 0.5s;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .sidebar-aboutme {
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .sidebar-module-inset {
+    //background-color: $theme-grey5;
+    border-radius: 4px;
+    p:last-child,
+    ul:last-child,
+    ol:last-child {
+      margin-bottom: 0;
+    }
+  }
+
 }
 
 .breadcrumb>li+li:before {
@@ -484,9 +495,9 @@ p.more {
   display: flex;
   justify-content: space-between;
   margin: 2rem 0;
-//  margin-bottom: 2rem;
+  //  margin-bottom: 2rem;
   padding-left: 0;
-//  padding-bottom: 2.5rem;
+  //  padding-bottom: 2.5rem;
   li {
     display: block;
     flex: 1;
@@ -501,8 +512,8 @@ p.more {
       padding: 5px 14px;
       transition: box-shadow 0.3s;
       min-height: 2rem;
-//      max-width: 50%;
-//      min-width: 45%;
+      //      max-width: 50%;
+      //      min-width: 45%;
 
       &:hover {
         border-color: $theme-grey3;
@@ -528,12 +539,12 @@ p.more {
   }
   .right > a, .next > a,
   .right > div, next > div {
-//    float: right;
+    //    float: right;
     text-align: right;
   }
   .left > a, .previous > a,
   .left > div, .previous > div {
-//    float: left;
+    //    float: left;
     text-align: left;
     margin-right: 16px;
   }
@@ -581,10 +592,7 @@ p.more {
   }
 }
 
-/*
- * Override Bootstrap's default container.
- */
-
+// override Bootstrap's default container width
 @media (min-width: 1200px) {
   .container {
     width: 970px;

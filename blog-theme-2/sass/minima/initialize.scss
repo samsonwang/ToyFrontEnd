@@ -41,10 +41,24 @@ $on-large:         $on-laptop !default;
   font-size: #{$ratio}rem;
 }
 
+@mixin text-glow {
+  transition: text-shadow .5s;
+  &:hover {
+    color: #fff !important;
+    text-decoration: none;
+    text-shadow: 0 0 10px rgba(255,255,255,.8);
+  }
+}
+
+@mixin square-background {
+  background-image: linear-gradient(to bottom,transparent 90%,#f8f8f8 10%), linear-gradient(to right,transparent 90%,#f8f8f8 10%);
+  background-size: 10px 10px,10px 10px;
+}
+
 // Import pre-styling-overrides hook and style-partials.
 @import
 "custom-variables", // Hook to override predefined variables.
 "base",             // Defines element resets.
-"layout",           // Defines structure and style based on CSS selectors.
+"layout",            // Defines structure and style based on CSS selectors.
 "custom-styles"     // Hook to override existing styles.
 ;

@@ -2,10 +2,15 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $border-color-03;
+  border-top: 1px solid $border-color-03;
   border-bottom: 1px solid $border-color-01;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
+
+  // nav bar
+  background-image: linear-gradient($cerulean-blue-03,
+                                    $cerulean-blue-02 60%,
+                                    $cerulean-blue-01);
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -13,6 +18,7 @@
 
 .site-title {
   @include relative-font-size(1.625);
+  @include text-glow;
   font-weight: 300;
   letter-spacing: -1px;
   margin-bottom: 0;
@@ -32,10 +38,12 @@
   position: absolute;
   top: 9px;
   right: $spacing-unit / 2;
-  background-color: $background-color;
-  border: 1px solid $border-color-01;
+  border: 1px solid $border-color-02;
   border-radius: 5px;
   text-align: right;
+  background-image: linear-gradient($cerulean-blue-03,
+                                    $cerulean-blue-02 60%,
+                                    $cerulean-blue-01);
 
   .nav-trigger {
     display: none;
@@ -48,10 +56,11 @@
     line-height: 0;
     padding-top: 10px;
     text-align: center;
+    fill: $site-nav-color;
 
-    > svg path {
-      fill: $border-color-03;
-    }
+    // > svg path {
+    //   fill: $site-nav-color;
+    // }
   }
 
   label[for="nav-trigger"] {
@@ -61,6 +70,7 @@
     height: 36px;
     z-index: 2;
     cursor: pointer;
+    background-color: transparent;
   }
 
   input ~ .trigger {
@@ -74,7 +84,8 @@
   }
 
   .page-link {
-    color: $text-color;
+    @include text-glow;
+    color: $site-title-color;
     line-height: $base-line-height;
     display: block;
     padding: 5px 10px;
@@ -90,7 +101,7 @@
     position: static;
     float: right;
     border: none;
-    background-color: inherit;
+    background: inherit;
 
     label[for="nav-trigger"] {
       display: none;
@@ -105,6 +116,7 @@
     }
 
     .page-link {
+      color: $site-title-color;
       display: inline;
       padding: 0;
 
@@ -115,7 +127,6 @@
     }
   }
 }
-
 
 
 /**

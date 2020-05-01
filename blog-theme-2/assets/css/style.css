@@ -444,7 +444,6 @@ table td {
  * Site header
  */
 .site-header {
-  border-top: 1px solid #424242;
   border-bottom: 1px solid #e8e8e8;
   min-height: 55.95px;
   line-height: 54px;
@@ -478,7 +477,7 @@ table td {
   position: absolute;
   top: 9px;
   right: 15px;
-  border: 1px solid #dbdbdb;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   text-align: right;
   background-image: linear-gradient(#04519b, #033C73 60%, #02325f);
@@ -493,7 +492,7 @@ table td {
   line-height: 0;
   padding-top: 10px;
   text-align: center;
-  fill: rgba(255, 255, 255, 0.5);
+  fill: #e8e8e8;
 }
 .site-nav label[for=nav-trigger] {
   display: block;
@@ -545,7 +544,6 @@ table td {
     display: block;
   }
   .site-nav .page-link {
-    color: #e8e8e8;
     display: inline;
     padding: 0;
     margin-left: auto;
@@ -559,8 +557,7 @@ table td {
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid #e8e8e8;
-  padding: 30px 0;
+  padding-bottom: 30px;
 }
 
 .footer-heading {
@@ -572,11 +569,13 @@ table td {
   padding: 5px 5px 2px 0;
 }
 
-.contact-list,
-.social-media-list,
-.pagination {
+.social-media-list, .pagination {
   list-style: none;
-  margin-left: 0;
+  margin: 0 auto;
+}
+
+.p-name {
+  font-size: 1.2rem;
 }
 
 .footer-col-wrapper,
@@ -585,8 +584,13 @@ table td {
   color: #828282;
 }
 
-.footer-col {
-  margin-bottom: 15px;
+.footer-col-wrapper {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 30px;
+}
+
+.footer-col * {
+  text-align: center;
 }
 
 .footer-col-1,
@@ -596,6 +600,30 @@ table td {
 
 .footer-col-3 {
   width: calc(100% - (30px / 2));
+}
+
+.site-desc {
+  font-size: 1.3rem;
+}
+
+.social-media-list, .pagination {
+  display: table;
+}
+.social-media-list li, .pagination li {
+  float: left;
+  margin: 5px 10px 5px 0;
+}
+.social-media-list li:last-of-type, .pagination li:last-of-type {
+  margin-right: 0;
+}
+.social-media-list li a, .pagination li a {
+  display: block;
+}
+.social-media-list li a svg, .pagination li a svg {
+  transition: fill 0.5s;
+}
+.social-media-list li a svg:hover, .pagination li a svg:hover {
+  fill: #2fa4e7;
 }
 
 @media screen and (min-width: 800px) {
@@ -614,6 +642,7 @@ table td {
 @media screen and (min-width: 600px) {
   .footer-col-wrapper {
     display: flex;
+    flex-direction: row-reverse;
   }
 
   .footer-col {
@@ -627,6 +656,27 @@ table td {
   .footer-col:last-child {
     padding-right: 0;
     padding-left: 15px;
+  }
+
+  .footer-col-3 {
+    text-align: left;
+  }
+
+  .p-name, .u-email, .copyright {
+    text-align: left;
+  }
+
+  .social-media-list, .pagination {
+    list-style: none;
+    margin: 0;
+  }
+  .social-media-list .svg-icon, .pagination .svg-icon {
+    padding-left: 0;
+  }
+
+  .site-desc {
+    font-size: 1.1rem;
+    text-align: right;
   }
 }
 /**
@@ -716,26 +766,6 @@ table td {
 }
 .post-content h6 {
   font-size: 1.0625rem;
-}
-
-.social-media-list, .pagination {
-  display: table;
-  margin: 0 auto;
-}
-.social-media-list li, .pagination li {
-  float: left;
-  margin: 5px 10px 5px 0;
-}
-.social-media-list li:last-of-type, .pagination li:last-of-type {
-  margin-right: 0;
-}
-.social-media-list li a, .pagination li a {
-  display: block;
-  padding: 7.5px;
-  border: 1px solid #e8e8e8;
-}
-.social-media-list li a:hover, .pagination li a:hover {
-  border-color: #dbdbdb;
 }
 
 /**

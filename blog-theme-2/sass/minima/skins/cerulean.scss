@@ -9,8 +9,10 @@ $cerulean-blue-02:      #033C73 !default;
 $cerulean-blue-03:      #04519b !default;
 $cerulean-blue-04:      #2fa4e7 !default;
 
-$site-title-color:      $brand-color-light;
-$site-nav-color:        rgba(255,255,255,.5);
+$site-title-color:      $brand-color-light !default;
+$nav-link-color:        $site-title-color !default;
+$nav-icon-color:        $site-title-color !default;
+//$nav-icon-border-color: rgba(255,255,255,.5);
 
 $text-color:            #111111 !default;
 $background-color:      #fdfdfd !default;

@@ -25,7 +25,8 @@
   <body>
     <header class="site-header">
       <div class="wrapper">
-        <a class="site-title" rel="author" href="https://jekyll.github.io/minima/">Your awesome title</a><nav class="site-nav">
+        <a class="site-title" rel="author" href="/">Your awesome title</a>
+        <nav class="site-nav">
           <input type="checkbox" id="nav-trigger" class="nav-trigger">
           <label for="nav-trigger">
             <span class="menu-icon">
@@ -35,8 +36,10 @@
             </span>
           </label>
           <div class="trigger">
-            <a class="page-link" href="https://jekyll.github.io/minima/about/">About</a>
-            <a class="page-link" href="https://jekyll.github.io/minima/History.html">HEAD</a>
+            <a class="page-link" href="/">Home</a>
+            <a class="page-link" href="#">Archive</a>
+            <a class="page-link" href="#">Tags</a>
+            <a class="page-link" href="#">Portfolio</a>
           </div>
         </nav>
       </div>
@@ -53,6 +56,7 @@
                   Welcome To Jekyll
                 </a>
               </h3>
+              <p>You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</p>
             </li>
 
             <li>
@@ -61,32 +65,43 @@
                 <a class="post-link" href="https://jekyll.github.io/minima/junk/2016/05/20/this-post-demonstrates-post-content-styles.html">
                   This post demonstrates post content styles
                 </a>
-            </h3></li><li>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.</p>
+            </li>
+
+            <li>
               <span class="post-meta">May 20, 2016</span>
               <h3>
-                <a class="post-link" href="https://jekyll.github.io/minima/misc/2016/05/20/super-long-article.html">
-                  Some articles are just so long they deserve a really long title to see if things will break well
-                </a>
-            </h3></li><li>
+                <a class="post-link" href="https://jekyll.github.io/minima/misc/2016/05/20/super-long-article.html">Some articles are just so long they deserve a really long title to see if things will break well</a>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>
+            </li>
+
+            <li>
               <span class="post-meta">May 20, 2016</span>
               <h3>
                 <a class="post-link" href="https://jekyll.github.io/minima/2016/05/20/my-example-post.html">
                   My Example Post
                 </a>
-            </h3></li><li>
+              </h3>
+            </li>
+
+            <li>
               <span class="post-meta">May 19, 2016</span>
               <h3>
-                <a class="post-link" href="https://jekyll.github.io/minima/misc/2016/05/19/super-short-article.html">
-                  Some articles are just so short that we have to make the footer stick
-                </a>
-          </h3></li></ul>
+                <a class="post-link" href="https://jekyll.github.io/minima/misc/2016/05/19/super-short-article.html">Some articles are just so short that we have to make the footer stick</a>
+              </h3>
+            </li>
+
+          </ul>
 
         </div>
 
       </div>
-    </main><footer class="site-footer h-card">
-      <data class="u-url" href="/minima/"></data>
+    </main>
 
+    <footer class="site-footer h-card">
+      <data class="u-url" href="/minima/"></data>
       <div class="wrapper">
         <div class="footer-col-wrapper">
 
@@ -116,6 +131,9 @@
                 <li><a rel="me" href="https://twitter.com/jekyllrb" title="jekyllrb">
                     <svg class="svg-icon grey"><use href="assets/svg/social-icons.svg#twitter"></use></svg>
                 </a></li>
+                <li><a rel="me" href="https://twitter.com/jekyllrb" title="jekyllrb">
+                    <svg class="svg-icon grey"><use href="assets/svg/social-icons.svg#facebook"></use></svg>
+                </a></li>
               </ul>
             </div>
           </div>
@@ -123,11 +141,20 @@
         </div>
       </div>
     </footer>
+
+    <!--
     <div>
       <div style="display: none; position: fixed; top: 30px; width: auto; max-width: 100%; text-align: center; left: 50%; transform: translateX(-50%); z-index: 99999999;">
         <div style="display: inline-block; font-size: 14px; font-weight: bold; border: 1px solid rgb(240, 195, 109); background-color: rgb(249, 237, 190); padding: 0px 10px; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;">
         </div>
       </div>
     </div>
+    -->
+
+    <div id="scroll-top" title="back to top" style="display: none;">
+      <div id="scroll-top-arrow"></div>
+      <div id="scroll-top-stick"></div>
+    </div>
+    <script src="assets/js/minila.js"></script>
   </body>
 </html>

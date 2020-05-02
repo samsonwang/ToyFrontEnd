@@ -251,7 +251,7 @@ TIMEZONE = "Asia/Shanghai"
 # Date format used to display post dates. (translatable)
 # Used by babel.dates, CLDR style: http://cldr.unicode.org/translation/date-time
 # You can also use 'full', 'long', 'medium', or 'short'
-# DATE_FORMAT = 'YYYY-MM-dd HH:mm'
+DATE_FORMAT = 'MMMM dd, YYYY'
 
 # Date format used to display post dates, if local dates are used. (translatable)
 # Used by moment.js: https://momentjs.com/docs/#/displaying/format/
@@ -909,7 +909,8 @@ INDEX_TEASERS = True
 # }}                            A literal } (U+007D RIGHT CURLY BRACKET)
 
 # 'Read more...' for the index page, if INDEX_TEASERS is True (translatable)
-INDEX_READ_MORE_LINK = '<p class="more"><a href="{link}">{read_more}…</a></p>'
+#INDEX_READ_MORE_LINK = '<p class="more"><a href="{link}">{read_more}…</a></p>'
+INDEX_READ_MORE_LINK = ''
 # 'Read more...' for the feeds, if FEED_TEASERS is True (translatable)
 FEED_READ_MORE_LINK = '<p><a href="{link}">{read_more}…</a> ({min_remaining_read})</p>'
 
@@ -1347,9 +1348,9 @@ WARN_ABOUT_TAG_METADATA = False
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
-#    "context_demo1": BLOG_AUTHOR,
-#    "context_demo2": time.gmtime().tm_year,
-#    "not_index": not_index,
+    #    "context_demo1": BLOG_AUTHOR,
+    #    "context_demo2": time.gmtime().tm_year,
+    #    "not_index": not_index,
     "theme_util": ThemeUtil
 }
 

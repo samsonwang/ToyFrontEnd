@@ -3,7 +3,7 @@
 
 <%def name="html_title(post)">
 %if title and not post.meta('hidetitle'):
-  <h1 class="p-name entry-title" itemprop="headline name">${post.title()|h}</h1>
+  <h1 class="post-title p-name" itemprop="name headline">${post.title()|h}</h1>
 %endif
 </%def>
 
@@ -44,27 +44,21 @@
 
 <%def name="html_author(post)">
   % if not post.author() == blog_author:
-    <div class="author blur-1">
+    <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    •
     % if author_pages_generated:
       <a href="${_link('author', post.author())}">${post.author()|h}</a>
     % else:
       ${post.author()|h}
     % endif
-    </div>
+    </span>
   % endif
 </%def>
 
 <%def name="html_date(post)">
-  <div class="date blur-1">
-    <time class="published dt-published" datetime="${post.formatted_date('webiso')}" itemprop="datePublished" title="${post.formatted_date('YYYY-MM-dd HH:mm')|h}">${post.formatted_date(date_format)|h}</time>
-  </div>
-</%def>
-
-<%def name="html_updated(post)">
-  %if post.meta('updated') and post.updated > post.date:
-    <div class="updated blur-1">
-      <time class="published dt-published" datetime="${post.formatted_updated('webiso')}" itemprop="datePublished" title="${post.formatted_updated('YYYY-MM-dd HH:mm')|h}">${post.formatted_updated(date_format)|h}</time>
-    </div>
+    <time class="dt-published" datetime="${post.formatted_date('webiso')}" itemprop="datePublished">${post.formatted_date(date_format)|h}</time>
+  %if post.updated and post.updated > post.date:
+    <span class="dt-updated"> • ${messages("updated")} <time datetime="${post.formatted_updated('webiso')}" itemprop="dateUpdated">${post.formatted_updated(date_format)|h}</time></span>
   %endif
 </%def>
 
@@ -85,16 +79,15 @@
 </%def>
 
 <%def name="html_post_header()">
-  <header>
+  <header class="post-header">
     ${html_title(post)}
-    <div class="metadata">
-      ${html_author(post)}
+    <p class="post-meta">
       ${html_date(post)}
-      ${html_updated(post)}
-      ${html_source(post)}
-      ${html_link(post)}
-      ${html_tags(post)}
-      ${html_translations(post)}
-    </div>
+      ${html_author(post)}
+##    ${html_source(post)}
+##    ${html_link(post)}
+##    ${html_tags(post)}
+##    ${html_translations(post)}
+    </p>
   </header>
 </%def>

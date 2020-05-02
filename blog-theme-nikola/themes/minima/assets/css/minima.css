@@ -302,13 +302,6 @@ a:hover {
   color: #2fa4e7;
   text-decoration: underline;
 }
-.social-media-list a:hover, .pagination a:hover {
-  text-decoration: none;
-}
-.social-media-list a:hover .username, .pagination a:hover .username {
-  text-decoration: underline;
-}
-
 /**
  * Blockquotes
  */
@@ -570,32 +563,20 @@ table td {
   margin-bottom: 15px;
 }
 
-.feed-subscribe .svg-icon {
-  padding: 5px 5px 2px 0;
-}
-
-.social-media-list, .pagination {
-  list-style: none;
-  margin: 0 auto;
-}
-
-.p-name {
-  font-size: 1.2rem;
-}
-
-.footer-col-wrapper,
-.social-links {
-  font-size: 0.9375rem;
-  color: #828282;
-}
-
 .footer-col-wrapper {
+  color: #828282;
   border-top: 1px solid #e8e8e8;
   padding-top: 30px;
 }
-
-.footer-col * {
+.footer-col-wrapper * {
   text-align: center;
+}
+.footer-col-wrapper * a {
+  color: inherit;
+}
+.footer-col-wrapper * a:hover {
+  color: #2fa4e7;
+  text-decoration: none;
 }
 
 .footer-col-1,
@@ -611,8 +592,14 @@ table td {
   font-size: 1.3rem;
 }
 
+.p-name {
+  font-size: 1.2rem;
+}
+
 .social-media-list, .pagination {
   display: table;
+  list-style: none;
+  margin: 0 auto;
 }
 .social-media-list li, .pagination li {
   float: left;
@@ -655,12 +642,12 @@ table td {
     padding: 0 15px;
   }
   .footer-col:first-child {
-    padding-right: 15px;
-    padding-left: 0;
-  }
-  .footer-col:last-child {
     padding-right: 0;
     padding-left: 15px;
+  }
+  .footer-col:last-child {
+    padding-right: 15px;
+    padding-left: 0;
   }
 
   .footer-col-3 {
@@ -681,6 +668,7 @@ table td {
 
   .site-desc {
     font-size: 1.1rem;
+    margin-top: 1.6rem;
     text-align: right;
   }
 }
@@ -717,6 +705,13 @@ table td {
   font-size: 14px;
   color: #828282;
 }
+.post-meta a {
+  color: #828282;
+  text-decoration: none;
+}
+.post-meta a:hover {
+  color: #2fa4e7;
+}
 
 .post-link {
   display: block;
@@ -747,7 +742,7 @@ table td {
   margin-bottom: 30px;
 }
 .post-content h1, .post-content h2, .post-content h3 {
-  margin-top: 60px;
+  margin-top: 45px;
 }
 .post-content h4, .post-content h5, .post-content h6 {
   margin-top: 30px;
@@ -776,6 +771,35 @@ table td {
 }
 .post-content h6 {
   font-size: 1.0625rem;
+}
+
+.post-pager {
+  margin: 20px 0 0;
+  list-style: none;
+}
+.post-pager .next, .post-pager .previous {
+  max-width: 45%;
+}
+.post-pager .next {
+  float: right;
+  text-align: right;
+}
+.post-pager .previous {
+  float: left;
+  text-align: left;
+}
+.post-pager li > a {
+  font-size: 1rem;
+  color: #828282;
+  text-decoration: none;
+}
+.post-pager li > a span {
+  font-size: 1.2rem;
+  color: #424242;
+  transition: color 0.6s;
+}
+.post-pager li > a span:hover {
+  color: #2fa4e7;
 }
 
 /**

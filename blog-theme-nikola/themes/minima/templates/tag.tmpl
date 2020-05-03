@@ -7,7 +7,7 @@
 </%block>
 
 <%block name="content">
-<article class="tagpage">
+<article class="tag-page">
     <header>
         <h1>${title|h}</h1>
         %if description:
@@ -27,9 +27,9 @@
         ${feeds_translations.translation_link(kind)}
     </header>
     %if posts:
-        <ul class="postlist">
+        <ul class="archive-list">
         % for post in posts:
-            <li><time class="listdate" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date('YYYY-MM-dd HH:mm')|h}">${post.formatted_date('YYYY-MM-dd')|h}</time> <a href="${post.permalink()}" class="listtitle">${post.title()|h}<a></li>
+            <li><time class="date" datetime="${post.formatted_date('webiso')}">${post.formatted_date(date_format)|h}</time> <a href="${post.permalink()}" class="title">${post.title()|h}<a></li>
         % endfor
         </ul>
     %endif

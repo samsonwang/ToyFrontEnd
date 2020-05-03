@@ -409,7 +409,7 @@
 
 
 // archive
-.archive_list {
+.archive-list {
   list-style: none;
   margin-left: 0;
   font-size: 1.2rem;
@@ -428,7 +428,6 @@
     //    margin-left: $spacing-unit / 5;
   }
 
-
   @include media-query($on-palm) {
     font-size: 1rem;
     list-style: circle;
@@ -444,6 +443,29 @@
 }
 
 
+// tags
+.tags-list {
+  list-style: none;
+  margin-left: 0;
+
+  li {
+    display: inline;
+  }
+
+  .badge {
+    color: $text-color;
+    border: 1px solid $border-color-04;
+    border-radius: 999rem;
+    padding: 3px 15px 5px;
+    text-decoration: none;
+    transition: all .5s;
+
+    &:hover {
+      color: $link-hover-color;
+      border-color: $link-hover-color;
+    }
+  }
+}
 
 /**
  * Pagination navbar

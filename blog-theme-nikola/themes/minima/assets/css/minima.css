@@ -802,32 +802,52 @@ table td {
   color: #2fa4e7;
 }
 
-.archive_list {
+.archive-list {
   list-style: none;
   margin-left: 0;
   font-size: 1.2rem;
 }
-.archive_list li {
+.archive-list li {
   display: flex;
   margin-bottom: 10px;
 }
-.archive_list .date {
+.archive-list .date {
   display: inline-block;
   min-width: 8rem;
 }
 @media screen and (max-width: 600px) {
-  .archive_list {
+  .archive-list {
     font-size: 1rem;
     list-style: circle;
     margin-left: 1.5rem;
   }
-  .archive_list li {
+  .archive-list li {
     display: list-item;
     margin-bottom: 5px;
   }
-  .archive_list .date {
+  .archive-list .date {
     min-width: 6.5rem;
   }
+}
+
+.tags-list {
+  list-style: none;
+  margin-left: 0;
+}
+.tags-list li {
+  display: inline;
+}
+.tags-list .badge {
+  color: #111111;
+  border: 1px solid #5c5c5c;
+  border-radius: 999rem;
+  padding: 3px 15px 5px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.tags-list .badge:hover {
+  color: #2fa4e7;
+  border-color: #2fa4e7;
 }
 
 /**

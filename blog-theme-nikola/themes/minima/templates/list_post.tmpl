@@ -15,7 +15,7 @@
     ${archive_nav.archive_navigation()}
     ${feeds_translations.translation_link(kind)}
     %if posts:
-    <ul class="archive_list">
+    <ul class="archive-list">
     % for post in posts:
       <li>
         <time class="date" datetime="${post.formatted_date('webiso')}">${post.formatted_date(date_format)|h}</time><a href="${post.permalink()}" class="title">${post.title()|h}</a>

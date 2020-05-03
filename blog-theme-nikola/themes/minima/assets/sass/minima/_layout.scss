@@ -408,6 +408,42 @@
 }
 
 
+// archive
+.archive_list {
+  list-style: none;
+  margin-left: 0;
+  font-size: 1.2rem;
+
+  li {
+    display: flex;
+    margin-bottom: $spacing-unit / 3;
+  }
+
+  .date {
+    display: inline-block;
+    min-width: 8rem;
+    //    margin-right: $spacing-unit / 5;
+  }
+  .title {
+    //    margin-left: $spacing-unit / 5;
+  }
+
+
+  @include media-query($on-palm) {
+    font-size: 1rem;
+    list-style: circle;
+    margin-left: 1.5rem;
+    li {
+      display: list-item;
+      margin-bottom: $spacing-unit / 6;
+    }
+    .date {
+      min-width: 6.5rem;
+    }
+  }
+}
+
+
 
 /**
  * Pagination navbar

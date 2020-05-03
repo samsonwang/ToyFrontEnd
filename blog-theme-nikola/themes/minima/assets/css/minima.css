@@ -396,7 +396,7 @@ pre > code {
   height: 16px;
   display: inline-block;
   fill: currentColor;
-  padding: 5px 3px 2px 5px;
+  padding: 5px;
   vertical-align: text-bottom;
 }
 
@@ -800,6 +800,34 @@ table td {
 }
 .post-pager li > a span:hover {
   color: #2fa4e7;
+}
+
+.archive_list {
+  list-style: none;
+  margin-left: 0;
+  font-size: 1.2rem;
+}
+.archive_list li {
+  display: flex;
+  margin-bottom: 10px;
+}
+.archive_list .date {
+  display: inline-block;
+  min-width: 8rem;
+}
+@media screen and (max-width: 600px) {
+  .archive_list {
+    font-size: 1rem;
+    list-style: circle;
+    margin-left: 1.5rem;
+  }
+  .archive_list li {
+    display: list-item;
+    margin-bottom: 5px;
+  }
+  .archive_list .date {
+    min-width: 6.5rem;
+  }
 }
 
 /**

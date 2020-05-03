@@ -7,11 +7,6 @@
 
 <%block name="extra_head">
   ${parent.extra_head()}
-  %if post.meta('keywords'):
-    <meta name="keywords" content="${post.meta('keywords')|h}">
-  %endif
-
-  <meta name="author" content="${post.author()|h}">
 
   %if post.prev_post:
     <link rel="prev" href="${post.prev_post.permalink()}" title="${post.prev_post.title()|h}" type="text/html">
@@ -25,6 +20,11 @@
     <meta name="robots" content="noindex">
   % endif
 
+  %if post.meta('keywords'):
+    <meta name="keywords" content="${post.meta('keywords')|h}">
+  %endif
+
+  <meta name="author" content="${post.author()|h}">
   ${helper.open_graph_metadata(post)}
   ${helper.twitter_card_information(post)}
   ${helper.meta_translations(post)}
@@ -37,6 +37,7 @@
   <div class="post-content e-content" itemprop="articleBody text">
     ${post.text()}
   </div>
+  ${helper.html_tags(post)}
   ${math.math_scripts_ifpost(post)}
 </article>
 </%block>

@@ -2,6 +2,8 @@
 .. title: This post demonstrates post content styles
 .. slug: this-post-demonstrates-post-content-styles
 .. date: 2016-05-20 18:01:47 UTC+08:00
+.. updated: 2017-06-11 18:01:47 UTC+08:00
+.. author: Nelson Mandela Muntz
 .. tags: test
 .. category: junk
 .. link:
